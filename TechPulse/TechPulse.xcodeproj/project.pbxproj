@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541639CA2C6AD03500DBB2F3 /* TPFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541639C92C6AD03500DBB2F3 /* TPFilterView.swift */; };
+		541639CC2C6AD06C00DBB2F3 /* TPCustomButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541639CB2C6AD06C00DBB2F3 /* TPCustomButtonIcon.swift */; };
+		541639CE2C6AE0CA00DBB2F3 /* TPTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541639CD2C6AE0CA00DBB2F3 /* TPTabControl.swift */; };
+		541639D02C6AE19E00DBB2F3 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541639CF2C6AE19E00DBB2F3 /* DependencyInjection.swift */; };
 		541B88D62C632FA200C093DA /* TechPulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88D52C632FA200C093DA /* TechPulseApp.swift */; };
 		541B88D82C632FA200C093DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88D72C632FA200C093DA /* ContentView.swift */; };
 		541B88DA2C632FA200C093DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88D92C632FA200C093DA /* Item.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		541639C92C6AD03500DBB2F3 /* TPFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPFilterView.swift; sourceTree = "<group>"; };
+		541639CB2C6AD06C00DBB2F3 /* TPCustomButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCustomButtonIcon.swift; sourceTree = "<group>"; };
+		541639CD2C6AE0CA00DBB2F3 /* TPTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPTabControl.swift; sourceTree = "<group>"; };
+		541639CF2C6AE19E00DBB2F3 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		541B88D22C632FA200C093DA /* TechPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		541B88D52C632FA200C093DA /* TechPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechPulseApp.swift; sourceTree = "<group>"; };
 		541B88D72C632FA200C093DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541639C82C6ACFE200DBB2F3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				541B88E82C633B0300C093DA /* TechPulseComponents.swift */,
+				541639CB2C6AD06C00DBB2F3 /* TPCustomButtonIcon.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		541B88C92C632FA200C093DA = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +81,11 @@
 		541B88D42C632FA200C093DA /* TechPulse */ = {
 			isa = PBXGroup;
 			children = (
+				541639C82C6ACFE200DBB2F3 /* Components */,
 				541B88E72C63326E00C093DA /* Info.plist */,
+				541639CF2C6AE19E00DBB2F3 /* DependencyInjection.swift */,
 				541B88D52C632FA200C093DA /* TechPulseApp.swift */,
 				541B88D72C632FA200C093DA /* ContentView.swift */,
-				541B88E82C633B0300C093DA /* TechPulseComponents.swift */,
 				541B88E52C63300A00C093DA /* TechPulseMain.swift */,
 				541B88D92C632FA200C093DA /* Item.swift */,
 				541B88DB2C632FA300C093DA /* Assets.xcassets */,
@@ -75,6 +93,8 @@
 				541B88EA2C63422800C093DA /* TPCreateAccount.swift */,
 				541B88EE2C63463500C093DA /* TPConfirmAccount.swift */,
 				541B88EC2C63451A00C093DA /* TPDashBoard.swift */,
+				541639C92C6AD03500DBB2F3 /* TPFilterView.swift */,
+				541639CD2C6AE0CA00DBB2F3 /* TPTabControl.swift */,
 			);
 			path = TechPulse;
 			sourceTree = "<group>";
@@ -159,12 +179,16 @@
 			files = (
 				541B88EF2C63463500C093DA /* TPConfirmAccount.swift in Sources */,
 				541B88E62C63300A00C093DA /* TechPulseMain.swift in Sources */,
+				541639D02C6AE19E00DBB2F3 /* DependencyInjection.swift in Sources */,
+				541639CE2C6AE0CA00DBB2F3 /* TPTabControl.swift in Sources */,
 				541B88ED2C63451A00C093DA /* TPDashBoard.swift in Sources */,
+				541639CA2C6AD03500DBB2F3 /* TPFilterView.swift in Sources */,
 				541B88E92C633B0300C093DA /* TechPulseComponents.swift in Sources */,
 				541B88D82C632FA200C093DA /* ContentView.swift in Sources */,
 				541B88EB2C63422800C093DA /* TPCreateAccount.swift in Sources */,
 				541B88DA2C632FA200C093DA /* Item.swift in Sources */,
 				541B88D62C632FA200C093DA /* TechPulseApp.swift in Sources */,
+				541639CC2C6AD06C00DBB2F3 /* TPCustomButtonIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

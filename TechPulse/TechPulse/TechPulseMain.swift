@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct TechPulseMain: View {
     
     @State private var email: String = ""

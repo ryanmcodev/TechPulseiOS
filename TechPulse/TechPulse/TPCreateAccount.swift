@@ -6,16 +6,31 @@
 //
 
 import SwiftUI
+import Observation
+
+@Observable
+final class TPCreateAccountViewModel {
+    var email: String = ""
+    var firstName: String = ""
+    var lastName: String = ""
+    var password: String = ""
+    var confirmPassword: String = ""
+    var disabled: Bool = false
+    var toConfirmAccount: Bool = false
+}
+
+extension TPCreateAccountViewModel {
+    
+    func submitData() {
+        toConfirmAccount = true
+    }
+}
 
 struct TPCreateAccount: View {
     
     @Environment(\.dismiss) var dismiss
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var disabled: Bool = false
-    @State private var toConfirmAccount: Bool = false
-    
+    @State private var vm = TPCreateAccountViewModel()
+        
     var body: some View {
         ScrollView {
             Grid(verticalSpacing: 20) {
@@ -44,44 +59,53 @@ struct TPCreateAccount: View {
                     TextFieldHeader(
                         title: "Email Address",
                         keyboard: .emailAddress,
-                        text: $email
+                        text: $vm.email
                     )
                 }
 
                 GridRow {
                     TextFieldHeader(
-                        title: "Fullname",
+                        title: "First name",
                         keyboard: .alphabet,
                         validation: .nonEmpty,
-                        text: $email
+                        text: $vm.firstName
+                    )
+                }
+
+                GridRow {
+                    TextFieldHeader(
+                        title: "Last name",
+                        keyboard: .alphabet,
+                        validation: .nonEmpty,
+                        text: $vm.lastName
                     )
                 }
 
                 GridRow {
                     SecureTextField(
                         title: "Password",
-                        text: $password
+                        text: $vm.password
                     )
                 }
 
                 GridRow {
                     SecureTextField(
                         title: "Re-enter password",
-                        text: $password
+                        text: $vm.confirmPassword
                     )
                 }
 
                 GridRow {
                     ButtonProminent(
                         title: "Submit",
-                        disable: disabled,
+                        disable: vm.disabled,
                         action: submitAction
                     )
                 }
             }
             .padding()
         }
-        .navigationDestination(isPresented: $toConfirmAccount) {
+        .navigationDestination(isPresented: $vm.toConfirmAccount) {
             TPConfirmAccount()
         }
     }
@@ -91,7 +115,7 @@ struct TPCreateAccount: View {
     }
     
     private func submitAction() {
-        toConfirmAccount = true
+        vm.submitData()
     }
 }
 
