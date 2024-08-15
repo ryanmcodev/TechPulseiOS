@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct TPTabControl: View {
+    
     var homeAction: () -> Void
     var writeAction: () -> Void
     var profileAction: () -> Void
+    
+    @State private var homeSelect: Bool = true
+    @State private var writeSelect: Bool = false
+    @State private var profileSelect: Bool = false
     
     var body: some View {
         HStack {
             TPCustomButtonIcon(
                 title: "Home",
-                image: "HomeIcon",
-                action: homeAction
+                image: "HomeIcon", 
+                isSelected: $homeSelect,
+                action: homeTap
             )
             .padding(.leading)
             
@@ -26,7 +32,8 @@ struct TPTabControl: View {
             TPCustomButtonIcon(
                 title: "Write",
                 image: "WriteIcon",
-                action: writeAction
+                isSelected: $writeSelect,
+                action: postTap
             )
             
             Spacer()
@@ -34,7 +41,8 @@ struct TPTabControl: View {
             TPCustomButtonIcon(
                 title: "Profile",
                 image: "UserIcon",
-                action: profileAction
+                isSelected: $profileSelect,
+                action: profileTap
             )
             .padding(.trailing)
         }
@@ -45,7 +53,29 @@ struct TPTabControl: View {
         .clipShape(RoundedRectangle(cornerRadius: 30))
         .padding([.leading, .trailing], 20)
     }
+    
+    private func homeTap() {
+        homeSelect = true
+        writeSelect = false
+        profileSelect = false
+        homeAction()
+    }
+    
+    private func postTap() {
+        homeSelect = false
+        writeSelect = true
+        profileSelect = false
+        writeAction()
+    }
+    
+    private func profileTap() {
+        homeSelect = false
+        writeSelect = false
+        profileSelect = true
+        profileAction()
+    }
 }
+
 #Preview {
     TPTabControl(
         homeAction: {},

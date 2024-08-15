@@ -21,6 +21,12 @@
 		541B88EB2C63422800C093DA /* TPCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88EA2C63422800C093DA /* TPCreateAccount.swift */; };
 		541B88ED2C63451A00C093DA /* TPDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88EC2C63451A00C093DA /* TPDashBoard.swift */; };
 		541B88EF2C63463500C093DA /* TPConfirmAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88EE2C63463500C093DA /* TPConfirmAccount.swift */; };
+		548ED9F72C6E8CB400775D9B /* TPProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9F62C6E8CB400775D9B /* TPProfileView.swift */; };
+		548ED9F92C6E8F2D00775D9B /* TPSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9F82C6E8F2D00775D9B /* TPSegmented.swift */; };
+		548ED9FB2C6E8F7600775D9B /* TPArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9FA2C6E8F7600775D9B /* TPArticleListView.swift */; };
+		548ED9FD2C6E8FAA00775D9B /* TPHomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9FC2C6E8FAA00775D9B /* TPHomeNavigationBar.swift */; };
+		548EDA002C6E9C0F00775D9B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9FF2C6E9C0F00775D9B /* HomeScreen.swift */; };
+		548EDA022C6E9C5C00775D9B /* TPProfileNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		541B88EA2C63422800C093DA /* TPCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCreateAccount.swift; sourceTree = "<group>"; };
 		541B88EC2C63451A00C093DA /* TPDashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPDashBoard.swift; sourceTree = "<group>"; };
 		541B88EE2C63463500C093DA /* TPConfirmAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPConfirmAccount.swift; sourceTree = "<group>"; };
+		548ED9F62C6E8CB400775D9B /* TPProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPProfileView.swift; sourceTree = "<group>"; };
+		548ED9F82C6E8F2D00775D9B /* TPSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPSegmented.swift; sourceTree = "<group>"; };
+		548ED9FA2C6E8F7600775D9B /* TPArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPArticleListView.swift; sourceTree = "<group>"; };
+		548ED9FC2C6E8FAA00775D9B /* TPHomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPHomeNavigationBar.swift; sourceTree = "<group>"; };
+		548ED9FF2C6E9C0F00775D9B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPProfileNavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,12 @@
 			children = (
 				541B88E82C633B0300C093DA /* TechPulseComponents.swift */,
 				541639CB2C6AD06C00DBB2F3 /* TPCustomButtonIcon.swift */,
+				541639C92C6AD03500DBB2F3 /* TPFilterView.swift */,
+				548ED9F82C6E8F2D00775D9B /* TPSegmented.swift */,
+				548ED9FA2C6E8F7600775D9B /* TPArticleListView.swift */,
+				541639CD2C6AE0CA00DBB2F3 /* TPTabControl.swift */,
+				548ED9FC2C6E8FAA00775D9B /* TPHomeNavigationBar.swift */,
+				548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -81,6 +99,7 @@
 		541B88D42C632FA200C093DA /* TechPulse */ = {
 			isa = PBXGroup;
 			children = (
+				548ED9FE2C6E9BFE00775D9B /* TPScreens */,
 				541639C82C6ACFE200DBB2F3 /* Components */,
 				541B88E72C63326E00C093DA /* Info.plist */,
 				541639CF2C6AE19E00DBB2F3 /* DependencyInjection.swift */,
@@ -93,8 +112,7 @@
 				541B88EA2C63422800C093DA /* TPCreateAccount.swift */,
 				541B88EE2C63463500C093DA /* TPConfirmAccount.swift */,
 				541B88EC2C63451A00C093DA /* TPDashBoard.swift */,
-				541639C92C6AD03500DBB2F3 /* TPFilterView.swift */,
-				541639CD2C6AE0CA00DBB2F3 /* TPTabControl.swift */,
+				548ED9F62C6E8CB400775D9B /* TPProfileView.swift */,
 			);
 			path = TechPulse;
 			sourceTree = "<group>";
@@ -105,6 +123,14 @@
 				541B88DE2C632FA300C093DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		548ED9FE2C6E9BFE00775D9B /* TPScreens */ = {
+			isa = PBXGroup;
+			children = (
+				548ED9FF2C6E9C0F00775D9B /* HomeScreen.swift */,
+			);
+			path = TPScreens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,14 +203,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548ED9F72C6E8CB400775D9B /* TPProfileView.swift in Sources */,
 				541B88EF2C63463500C093DA /* TPConfirmAccount.swift in Sources */,
+				548ED9F92C6E8F2D00775D9B /* TPSegmented.swift in Sources */,
 				541B88E62C63300A00C093DA /* TechPulseMain.swift in Sources */,
 				541639D02C6AE19E00DBB2F3 /* DependencyInjection.swift in Sources */,
 				541639CE2C6AE0CA00DBB2F3 /* TPTabControl.swift in Sources */,
+				548ED9FD2C6E8FAA00775D9B /* TPHomeNavigationBar.swift in Sources */,
 				541B88ED2C63451A00C093DA /* TPDashBoard.swift in Sources */,
 				541639CA2C6AD03500DBB2F3 /* TPFilterView.swift in Sources */,
+				548EDA022C6E9C5C00775D9B /* TPProfileNavigationBar.swift in Sources */,
+				548ED9FB2C6E8F7600775D9B /* TPArticleListView.swift in Sources */,
 				541B88E92C633B0300C093DA /* TechPulseComponents.swift in Sources */,
 				541B88D82C632FA200C093DA /* ContentView.swift in Sources */,
+				548EDA002C6E9C0F00775D9B /* HomeScreen.swift in Sources */,
 				541B88EB2C63422800C093DA /* TPCreateAccount.swift in Sources */,
 				541B88DA2C632FA200C093DA /* Item.swift in Sources */,
 				541B88D62C632FA200C093DA /* TechPulseApp.swift in Sources */,

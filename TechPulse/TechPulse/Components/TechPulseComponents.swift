@@ -107,6 +107,7 @@ struct TextFieldHeader: View {
     @Environment(\.colorScheme) private var colorScheme
     
     var title: String
+    var fontweight: Font.Weight? = .bold
     var capitalize: TextInputAutocapitalization = .never
     var keyboard: UIKeyboardType = .default
     var maxLimit: Int = 60
@@ -120,7 +121,7 @@ struct TextFieldHeader: View {
         VStack(alignment: .leading, spacing: 0) {
             Text(title)
                 .font(.subheadline)
-                .fontWeight(.bold)
+                .fontWeight(fontweight)
                 .foregroundColor(titleColor)
                 .fixedSize()
                 .padding([.bottom], 8)
@@ -286,6 +287,47 @@ struct ButtonProminent: View {
     }
 }
 
+struct TextEditorHeader: View {
+    
+    @Environment(\.colorScheme) private var colorScheme
+    
+    var title: String
+    var fontweight: Font.Weight? = .bold
+    var capitalize: TextInputAutocapitalization = .never
+    var keyboard: UIKeyboardType = .default
+    var maxLimit: Int = 60
+    var style: HeaderColor = .style1
+    var validation: TextFieldValidation = .nonEmpty
+    @Binding var text: String
+    
+    @State private var titleColor: Color = .red
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(title)
+                .font(.subheadline)
+                .fontWeight(fontweight)
+                .foregroundColor(titleColor)
+                .fixedSize()
+                .padding([.bottom], 8)
+            TextField("", text: $text, axis: .vertical)
+                .keyboardType(keyboard)
+                .textInputAutocapitalization(capitalize)
+                .autocorrectionDisabled(true)
+                .lineLimit(10, reservesSpace: true)
+                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(borderStroke, lineWidth: 0.5)
+                )
+        }
+    }
+    
+    var borderStroke: Color {
+        colorScheme == .dark ? .white : .gray
+    }
+}
+
 struct IconTextStat: View {
     var icon: String
     var text: String
@@ -303,12 +345,62 @@ struct IconTextStat: View {
 struct UserName: View {
     var image: String
     var name: String
-    
     var body: some View {
         HStack {
             Image(image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 24, height: 24)
+                .clipShape(Circle())
+
             Text(name)
                 .fontWeight(.light)
+        }
+    }
+}
+
+struct UserProfileComponent: View {
+    var image: String
+    var name: String
+    var status: String
+    var body: some View {
+        HStack {
+            Image(image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 40, height: 40)
+                .clipShape(Circle())
+            VStack(alignment: .leading) {
+                Text(name)
+                    .fontWeight(.bold)
+                Text(status)
+                    .font(.caption)
+                    .fontWeight(.light)
+            }
+        }
+    }
+}
+
+struct UserHyperlink: View {
+    var image: String
+    var updateAction: () -> Void
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack() {
+                Image(image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                    .padding([.trailing], 15)
+                Button(action: updateAction) {
+                    Text("Choose an image")
+                        .underline()
+                        .fontWeight(.light)
+                }
+                .tint(Color(hex: "FF2E3D"))
+                Spacer()
+            }
         }
     }
 }
