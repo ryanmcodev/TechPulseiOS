@@ -20,6 +20,7 @@ struct TPProfileView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var vm = TPProfileViewModel()
+    @State private var photoOptions: Bool = false
     
     var body: some View {
         ScrollView {
@@ -92,14 +93,30 @@ struct TPProfileView: View {
                 .buttonStyle(.borderedProminent)
             }
         }
+        .sheet(isPresented: $photoOptions) {
+            TPPhotoOptionsView(
+                cameraAction: cameraAction,
+                galleryAction: galleryAction
+            )
+            .presentationDetents([.height(250)])
+        }
+
     }
     
     private func chooseImageAction() {
-        
+        photoOptions = true
     }
     
+    private func cameraAction() {
+
+    }
+
+    private func galleryAction() {
+
+    }
+
     private func editAction() {
-        
+        dismiss()
     }
     
     private func backAction() {

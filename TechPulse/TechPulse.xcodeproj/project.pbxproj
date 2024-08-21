@@ -21,6 +21,8 @@
 		541B88EB2C63422800C093DA /* TPCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88EA2C63422800C093DA /* TPCreateAccount.swift */; };
 		541B88ED2C63451A00C093DA /* TPDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88EC2C63451A00C093DA /* TPDashBoard.swift */; };
 		541B88EF2C63463500C093DA /* TPConfirmAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B88EE2C63463500C093DA /* TPConfirmAccount.swift */; };
+		547B6E702C6EB3B900B83C7C /* TPPhotoOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B6E6F2C6EB3B900B83C7C /* TPPhotoOptionsView.swift */; };
+		54817F4F2C769B1000D4EF10 /* TPArticlePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54817F4E2C769B1000D4EF10 /* TPArticlePost.swift */; };
 		548ED9F72C6E8CB400775D9B /* TPProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9F62C6E8CB400775D9B /* TPProfileView.swift */; };
 		548ED9F92C6E8F2D00775D9B /* TPSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9F82C6E8F2D00775D9B /* TPSegmented.swift */; };
 		548ED9FB2C6E8F7600775D9B /* TPArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9FA2C6E8F7600775D9B /* TPArticleListView.swift */; };
@@ -46,6 +48,8 @@
 		541B88EA2C63422800C093DA /* TPCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCreateAccount.swift; sourceTree = "<group>"; };
 		541B88EC2C63451A00C093DA /* TPDashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPDashBoard.swift; sourceTree = "<group>"; };
 		541B88EE2C63463500C093DA /* TPConfirmAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPConfirmAccount.swift; sourceTree = "<group>"; };
+		547B6E6F2C6EB3B900B83C7C /* TPPhotoOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPhotoOptionsView.swift; sourceTree = "<group>"; };
+		54817F4E2C769B1000D4EF10 /* TPArticlePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPArticlePost.swift; sourceTree = "<group>"; };
 		548ED9F62C6E8CB400775D9B /* TPProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPProfileView.swift; sourceTree = "<group>"; };
 		548ED9F82C6E8F2D00775D9B /* TPSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPSegmented.swift; sourceTree = "<group>"; };
 		548ED9FA2C6E8F7600775D9B /* TPArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPArticleListView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				541B88EE2C63463500C093DA /* TPConfirmAccount.swift */,
 				541B88EC2C63451A00C093DA /* TPDashBoard.swift */,
 				548ED9F62C6E8CB400775D9B /* TPProfileView.swift */,
+				547B6E6F2C6EB3B900B83C7C /* TPPhotoOptionsView.swift */,
+				54817F4E2C769B1000D4EF10 /* TPArticlePost.swift */,
 			);
 			path = TechPulse;
 			sourceTree = "<group>";
@@ -207,8 +213,10 @@
 				541B88EF2C63463500C093DA /* TPConfirmAccount.swift in Sources */,
 				548ED9F92C6E8F2D00775D9B /* TPSegmented.swift in Sources */,
 				541B88E62C63300A00C093DA /* TechPulseMain.swift in Sources */,
+				54817F4F2C769B1000D4EF10 /* TPArticlePost.swift in Sources */,
 				541639D02C6AE19E00DBB2F3 /* DependencyInjection.swift in Sources */,
 				541639CE2C6AE0CA00DBB2F3 /* TPTabControl.swift in Sources */,
+				547B6E702C6EB3B900B83C7C /* TPPhotoOptionsView.swift in Sources */,
 				548ED9FD2C6E8FAA00775D9B /* TPHomeNavigationBar.swift in Sources */,
 				541B88ED2C63451A00C093DA /* TPDashBoard.swift in Sources */,
 				541639CA2C6AD03500DBB2F3 /* TPFilterView.swift in Sources */,

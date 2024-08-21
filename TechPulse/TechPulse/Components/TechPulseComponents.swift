@@ -300,7 +300,7 @@ struct TextEditorHeader: View {
     var validation: TextFieldValidation = .nonEmpty
     @Binding var text: String
     
-    @State private var titleColor: Color = .red
+    @State private var titleColor: Color = .black
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
