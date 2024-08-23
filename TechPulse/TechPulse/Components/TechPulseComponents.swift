@@ -360,58 +360,6 @@ struct UserName: View {
     }
 }
 
-struct UserProfileComponent: View {
-    var image: String
-    var name: String
-    var status: String
-    var body: some View {
-        HStack {
-            Image(image)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())
-            VStack(alignment: .leading) {
-                Text(name)
-                    .fontWeight(.bold)
-                Text(status)
-                    .font(.caption)
-                    .fontWeight(.light)
-            }
-        }
-    }
-}
-
-struct UserProfileFollowComponent: View {
-    var image: String
-    var name: String
-    var status: String
-    var followAction: () -> Void
-    var body: some View {
-        HStack {
-            Image(image)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(name)
-                        .fontWeight(.regular)
-                    Button(action: followAction) {
-                        Text("Follow")
-                            .fontWeight(.regular)
-                            .foregroundStyle(Color(hex: "FF2E3D"))
-                    }
-                }
-                Text(status)
-                    .font(.caption)
-                    .fontWeight(.light)
-            }
-        }
-    }
-}
-
 struct UserHyperlink: View {
     var image: String
     var updateAction: () -> Void

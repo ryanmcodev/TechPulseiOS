@@ -14,6 +14,7 @@ enum TechPulseScreen: Hashable {
     case signup
     case write
     case detail(ArticleObject)
+    case claps
 }
 
 extension TechPulseScreen {
@@ -30,6 +31,8 @@ extension TechPulseScreen {
             Text("Write a Post")
         case .detail(let article):
             TPArticlePost(article: article)
+        case .claps:
+            TPArticalPostClaps()
         }
     }
 }

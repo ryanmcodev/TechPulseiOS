@@ -27,9 +27,8 @@ extension TPCreateAccountViewModel {
 }
 
 struct TPCreateAccount: View {
-    
     @Environment(\.dismiss) private var dismiss
-    @Environment(TechPulseRouter.self) private var router
+    @Environment(TechPulseRouter.self) private var router: TechPulseRouter
     @State private var vm = TPCreateAccountViewModel()
         
     var body: some View {

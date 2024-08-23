@@ -30,6 +30,9 @@
 		548EDA002C6E9C0F00775D9B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9FF2C6E9C0F00775D9B /* HomeScreen.swift */; };
 		548EDA022C6E9C5C00775D9B /* TPProfileNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */; };
 		54B590042C780BDB00BB17E6 /* TechPulseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B590032C780BDB00BB17E6 /* TechPulseRouter.swift */; };
+		54B590062C783E5A00BB17E6 /* TPArticalPostClaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B590052C783E5A00BB17E6 /* TPArticalPostClaps.swift */; };
+		54B590082C783F0300BB17E6 /* UserProfileFollowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B590072C783F0300BB17E6 /* UserProfileFollowComponent.swift */; };
+		54B5900A2C783F3000BB17E6 /* UserProfileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B590092C783F3000BB17E6 /* UserProfileComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		548ED9FF2C6E9C0F00775D9B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPProfileNavigationBar.swift; sourceTree = "<group>"; };
 		54B590032C780BDB00BB17E6 /* TechPulseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechPulseRouter.swift; sourceTree = "<group>"; };
+		54B590052C783E5A00BB17E6 /* TPArticalPostClaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPArticalPostClaps.swift; sourceTree = "<group>"; };
+		54B590072C783F0300BB17E6 /* UserProfileFollowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileFollowComponent.swift; sourceTree = "<group>"; };
+		54B590092C783F3000BB17E6 /* UserProfileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 				541639CD2C6AE0CA00DBB2F3 /* TPTabControl.swift */,
 				548ED9FC2C6E8FAA00775D9B /* TPHomeNavigationBar.swift */,
 				548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */,
+				54B590072C783F0300BB17E6 /* UserProfileFollowComponent.swift */,
+				54B590092C783F3000BB17E6 /* UserProfileComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 				547B6E6F2C6EB3B900B83C7C /* TPPhotoOptionsView.swift */,
 				54817F4E2C769B1000D4EF10 /* TPArticlePost.swift */,
 				54B590032C780BDB00BB17E6 /* TechPulseRouter.swift */,
+				54B590052C783E5A00BB17E6 /* TPArticalPostClaps.swift */,
 			);
 			path = TechPulse;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B5900A2C783F3000BB17E6 /* UserProfileComponent.swift in Sources */,
 				548ED9F72C6E8CB400775D9B /* TPProfileView.swift in Sources */,
 				541B88EF2C63463500C093DA /* TPConfirmAccount.swift in Sources */,
 				548ED9F92C6E8F2D00775D9B /* TPSegmented.swift in Sources */,
@@ -222,10 +232,12 @@
 				547B6E702C6EB3B900B83C7C /* TPPhotoOptionsView.swift in Sources */,
 				548ED9FD2C6E8FAA00775D9B /* TPHomeNavigationBar.swift in Sources */,
 				541B88ED2C63451A00C093DA /* TPDashBoard.swift in Sources */,
+				54B590082C783F0300BB17E6 /* UserProfileFollowComponent.swift in Sources */,
 				541639CA2C6AD03500DBB2F3 /* TPFilterView.swift in Sources */,
 				548EDA022C6E9C5C00775D9B /* TPProfileNavigationBar.swift in Sources */,
 				548ED9FB2C6E8F7600775D9B /* TPArticleListView.swift in Sources */,
 				541B88E92C633B0300C093DA /* TechPulseComponents.swift in Sources */,
+				54B590062C783E5A00BB17E6 /* TPArticalPostClaps.swift in Sources */,
 				541B88D82C632FA200C093DA /* ContentView.swift in Sources */,
 				54B590042C780BDB00BB17E6 /* TechPulseRouter.swift in Sources */,
 				548EDA002C6E9C0F00775D9B /* HomeScreen.swift in Sources */,

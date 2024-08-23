@@ -24,14 +24,23 @@ struct TPArticleTabStatsView: View {
 }
 
 struct TPArticlePostStats: View {
+    var clap: () -> Void
+    var chat: () -> Void
+    var bookmark: () -> Void
     
     var body: some View {
         HStack {
-            TPArticleTabStatsView(image: "hands.clap", text: "7")
+            Button(action: clap) {
+                TPArticleTabStatsView(image: "hands.clap", text: "7")
+            }
             Spacer()
-            TPArticleTabStatsView(image: "bubble.left.and.bubble.right", text: "10")
+            Button(action: chat) {
+                TPArticleTabStatsView(image: "bubble.left.and.bubble.right", text: "10")
+            }
             Spacer()
-            TPArticleTabStatsView(image: "bookmark", text: "")
+            Button(action: bookmark) {
+                TPArticleTabStatsView(image: "bookmark", text: "")
+            }
         }
         .padding([.leading, .trailing], 20)
         .foregroundStyle(Color.white)
@@ -65,7 +74,7 @@ struct TPArticlePostDescriptionView: View {
 
 struct TPArticlePost: View {
     @Environment(\.dismiss) private var dismiss
-    
+    @Environment(TechPulseRouter.self) private var router
     var article: ArticleObject
     
     var body: some View {
@@ -100,7 +109,11 @@ struct TPArticlePost: View {
                 }
                 .padding()
             }
-            TPArticlePostStats()
+            TPArticlePostStats(
+                clap: clapAction,
+                chat: chatAction,
+                bookmark: bookmarkAction
+            )
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -153,6 +166,19 @@ extension TPArticlePost {
     private func settingsAction() {
         
     }
+    
+    private func clapAction() {
+        router.push(screen: .claps)
+    }
+
+    private func chatAction() {
+        
+    }
+
+    private func bookmarkAction() {
+        
+    }
+
 }
 
 #Preview {

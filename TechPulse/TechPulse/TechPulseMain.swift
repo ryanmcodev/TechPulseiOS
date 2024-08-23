@@ -15,8 +15,6 @@ struct TechPulseMain: View {
     @State private var email: String = "erika.albright@techpulse.com"
     @State private var password: String = "p@$$w0rd"
     @State private var disabled: Bool = false
-    @State private var toDashBoard: Bool = false
-    @State private var toCreateAccount: Bool = false
     
     var body: some View {
         ScrollView {
@@ -74,12 +72,6 @@ struct TechPulseMain: View {
             }
             .padding()
         }
-//        .navigationDestination(isPresented: $toCreateAccount) {
-//            TPCreateAccount()
-//        }
-//        .navigationDestination(isPresented: $toDashBoard) {
-//            TPDashBoard()
-//        }
     }
     
     private func forgotPasswordAction() {
@@ -87,12 +79,10 @@ struct TechPulseMain: View {
     }
     
     private func createAccountAction() {
-        //toCreateAccount = true
         router.push(screen: .signup)
     }
     
     private func signInAction() {
-        //toDashBoard = true
         router.push(screen: .dashboard)
     }
 }
