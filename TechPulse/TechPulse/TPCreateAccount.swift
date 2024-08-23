@@ -28,7 +28,8 @@ extension TPCreateAccountViewModel {
 
 struct TPCreateAccount: View {
     
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
+    @Environment(TechPulseRouter.self) private var router
     @State private var vm = TPCreateAccountViewModel()
         
     var body: some View {
@@ -105,9 +106,6 @@ struct TPCreateAccount: View {
             }
             .padding()
         }
-        .navigationDestination(isPresented: $vm.toConfirmAccount) {
-            TPConfirmAccount()
-        }
     }
     
     private func popAction() {
@@ -115,7 +113,7 @@ struct TPCreateAccount: View {
     }
     
     private func submitAction() {
-        vm.submitData()
+        router.push(screen: .dashboard)
     }
 }
 

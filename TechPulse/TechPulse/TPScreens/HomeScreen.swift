@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeScreen: View {
     var tagAction: () -> Void
     var bellAction: () -> Void
+    var selected: (ArticleObject) -> Void
     
     var body: some View {
         VStack {
@@ -31,10 +32,10 @@ struct HomeScreen: View {
             
             Divider()
             
-            TPArticleListView()
+            TPArticleListView(articleType: .dashboard ,selected: selected)
         }
     }
 }
 #Preview {
-    HomeScreen(tagAction: {}, bellAction: {})
+    HomeScreen(tagAction: {}, bellAction: {}, selected: { _ in })
 }

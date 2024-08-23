@@ -29,6 +29,7 @@
 		548ED9FD2C6E8FAA00775D9B /* TPHomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9FC2C6E8FAA00775D9B /* TPHomeNavigationBar.swift */; };
 		548EDA002C6E9C0F00775D9B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ED9FF2C6E9C0F00775D9B /* HomeScreen.swift */; };
 		548EDA022C6E9C5C00775D9B /* TPProfileNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */; };
+		54B590042C780BDB00BB17E6 /* TechPulseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B590032C780BDB00BB17E6 /* TechPulseRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		548ED9FC2C6E8FAA00775D9B /* TPHomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPHomeNavigationBar.swift; sourceTree = "<group>"; };
 		548ED9FF2C6E9C0F00775D9B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		548EDA012C6E9C5C00775D9B /* TPProfileNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPProfileNavigationBar.swift; sourceTree = "<group>"; };
+		54B590032C780BDB00BB17E6 /* TechPulseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechPulseRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				548ED9F62C6E8CB400775D9B /* TPProfileView.swift */,
 				547B6E6F2C6EB3B900B83C7C /* TPPhotoOptionsView.swift */,
 				54817F4E2C769B1000D4EF10 /* TPArticlePost.swift */,
+				54B590032C780BDB00BB17E6 /* TechPulseRouter.swift */,
 			);
 			path = TechPulse;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				548ED9FB2C6E8F7600775D9B /* TPArticleListView.swift in Sources */,
 				541B88E92C633B0300C093DA /* TechPulseComponents.swift in Sources */,
 				541B88D82C632FA200C093DA /* ContentView.swift in Sources */,
+				54B590042C780BDB00BB17E6 /* TechPulseRouter.swift in Sources */,
 				548EDA002C6E9C0F00775D9B /* HomeScreen.swift in Sources */,
 				541B88EB2C63422800C093DA /* TPCreateAccount.swift in Sources */,
 				541B88DA2C632FA200C093DA /* Item.swift in Sources */,

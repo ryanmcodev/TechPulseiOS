@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileScreen: View {
     var editAction: () -> Void
     var signOutAction: () -> Void
+    var selected: (ArticleObject) -> Void
     
     var body: some View {
         VStack {
@@ -32,7 +33,7 @@ struct ProfileScreen: View {
             
             Divider()
             
-            TPArticleListView()
+            TPArticleListView(articleType: .user, selected: selected)
         }
     }
 }
@@ -45,9 +46,14 @@ enum TabMenuType {
 }
 
 struct TPDashBoard: View {
+    
+    @Environment(TechPulseRouter.self) private var router: TechPulseRouter
+    
     @State private var showFilter: Bool = false
     @State private var selectedTab: TabMenuType = .home
     @State private var gotoProfile: Bool = false
+    @State private var gotoDetails: Bool = false
+    @State private var isTabBarHidden: Bool = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -74,19 +80,22 @@ struct TPDashBoard: View {
         case .home:
             HomeScreen(
                 tagAction: tagAction,
-                bellAction: bellAction
+                bellAction: bellAction,
+                selected: dashBoardSelected
             )
 
         case .post:
-            HomeScreen(
-                tagAction: tagAction,
-                bellAction: bellAction
-            )
-
+            Text("Post")
+//            HomeScreen(
+//                tagAction: tagAction,
+//                bellAction: bellAction
+//            )
+            
         case .profile:
             ProfileScreen(
                 editAction: editAction,
-                signOutAction: signOutAction
+                signOutAction: signOutAction,
+                selected: profileSelected
             )
         }
     }
@@ -94,6 +103,14 @@ struct TPDashBoard: View {
 
 // MARK: - CTAs
 extension TPDashBoard {
+
+    func dashBoardSelected(article: ArticleObject) {
+        router.push(screen: .detail(article))
+    }
+    
+    func profileSelected(article: ArticleObject) {
+        router.push(screen: .detail(article))
+    }
     
     func tagAction() {
         showFilter = true
@@ -109,6 +126,7 @@ extension TPDashBoard {
     
     func writeAction() {
         selectedTab = .post
+        router.push(screen: .write)
     }
     
     func userAction() {

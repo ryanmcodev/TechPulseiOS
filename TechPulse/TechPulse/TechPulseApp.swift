@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct TechPulseApp: App {
+    @State private var router = TechPulseRouter()
     
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -26,8 +27,21 @@ struct TechPulseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TechPulseMain()
+            NavigationStack(path: $router.path) {
+                generate(screen: .login)
+                    .navigationDestination(for: TechPulseScreen.self) { screen in
+                        generate(screen: screen)
+                    }
+            }
         }
         .modelContainer(sharedModelContainer)
     }
+    
+    @ViewBuilder
+    private func generate(screen: TechPulseScreen) -> some View {
+        screen.view
+            .environment(router)
+    }
 }
+
+

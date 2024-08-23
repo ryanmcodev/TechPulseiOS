@@ -355,6 +355,7 @@ struct UserName: View {
 
             Text(name)
                 .fontWeight(.light)
+                .foregroundStyle(Color.black)
         }
     }
 }
@@ -373,6 +374,36 @@ struct UserProfileComponent: View {
             VStack(alignment: .leading) {
                 Text(name)
                     .fontWeight(.bold)
+                Text(status)
+                    .font(.caption)
+                    .fontWeight(.light)
+            }
+        }
+    }
+}
+
+struct UserProfileFollowComponent: View {
+    var image: String
+    var name: String
+    var status: String
+    var followAction: () -> Void
+    var body: some View {
+        HStack {
+            Image(image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 40, height: 40)
+                .clipShape(Circle())
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(name)
+                        .fontWeight(.regular)
+                    Button(action: followAction) {
+                        Text("Follow")
+                            .fontWeight(.regular)
+                            .foregroundStyle(Color(hex: "FF2E3D"))
+                    }
+                }
                 Text(status)
                     .font(.caption)
                     .fontWeight(.light)
@@ -435,19 +466,25 @@ struct ArticleView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Designing for Impact: 6 Ideas to Enhance the User Experience and Accessibility of Your Power BI")
+            Text(title)
+                .multilineTextAlignment(.leading)
                 .lineLimit(2)
                 .font(.headline)
                 .fontWeight(.heavy)
-            Text("A Journey Through the Design of an Equity, Diversity and Inclusion Power BI Dashboard.")
+                .foregroundStyle(Color.black)
+            Text(description)
+                .multilineTextAlignment(.leading)
                 .lineLimit(2)
                 .font(.subheadline)
                 .fontWeight(.light)
+                .foregroundStyle(Color.black)
         }
     }
 }
 
 struct ListItemView: View {
+    var article: ArticleObject
+    
     var body: some View {
         VStack(alignment: .leading) {
             UserName(
@@ -456,10 +493,7 @@ struct ListItemView: View {
             )
 
             HStack(alignment: .top) {
-                ArticleView(
-                    title: "Designing for Impact: 6 Ideas to Enhance the User Experience and Accessibility of Your Power BI",
-                    description: "A Journey Through the Design of an Equity, Diversity and Inclusion Power BI Dashboard."
-                )
+                ArticleView(title: article.title, description: article.body)
                 Image("ThumbIcon")
             }
             .padding([.bottom], 10)
